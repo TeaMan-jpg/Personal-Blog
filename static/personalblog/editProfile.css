@@ -1,0 +1,34 @@
+
+html,body { height: 100%; margin: 0px; padding: 0px; }
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.forms {
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: bisque;
+    height: 100%;
+}
+
+.pass,.user,.email {
+    width: 40rem;
+}
+
+#exampleFormControlInput1,#exampleFormControlTextarea1 {
+    width: 40rem;
+}
+
+
+.saves {
+    width: 40rem;
+    border-radius: 0.3rem;
+    padding: 0.3rem;
+}

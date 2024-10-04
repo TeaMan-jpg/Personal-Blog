@@ -1,0 +1,57 @@
+form {
+   
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+    border:1px solid gray;
+    border-radius: 10%;
+   
+    
+}
+
+input {
+   
+    border-color:gray ;
+}
+
+html,body { height: 100%; margin: 0px; padding: 0px; }
+
+label {
+    color: black;
+}
+
+
+
+.card {
+    
+    width: 58rem;
+    text-overflow: ellipsis;
+    margin-top: 1rem;
+    
+}
+
+.blogs {
+   
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+ 
+    
+
+}
+
+.text {
+      
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    flex-direction: column;
+    background-color: bisque;
+   
+}

@@ -1,0 +1,49 @@
+
+html,body { height: 100%; margin: 0px; padding: 0px; }
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.forms {
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    flex-direction: column;
+    background-color: bisque;
+    height: 100%;
+}
+a {
+    text-decoration: none;
+}
+
+.pass,.user,.email {
+    width: 40rem;
+}
+
+#exampleFormControlInput1,#exampleFormControlTextarea1 {
+    width: 40rem;
+}
+
+
+.saves {
+    width: 40rem;
+    border-radius: 0.3rem;
+    padding: 0.3rem;
+}
+
+.buttons {
+    display: flex;
+    
+}
+
+.back {
+    margin-right: 1rem;
+}

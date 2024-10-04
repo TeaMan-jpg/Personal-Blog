@@ -1,0 +1,41 @@
+.forms {
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: bisque;
+    height: 100%;
+}
+html,body { height: 100%; margin: 0px; padding: 0px; }
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-control {
+    width: 60rem;
+}
+
+.pass,.user,.email {
+    width: 40rem;
+}
+
+.signup {
+    padding: 0.5rem;
+    width: 40rem;
+    background-color: white;
+    border-radius: 0.3rem;
+    outline: none;
+}
+#exampleFormControlInput1 {
+    width: 40rem;
+}
+.login {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+

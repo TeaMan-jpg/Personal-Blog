@@ -1,0 +1,38 @@
+.card {
+    width: 58rem;
+    margin-bottom: 2rem;
+}
+
+.blogs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+/* .cards {
+    width: 18rem;
+} */
+
+.box {
+    background-color:bisque;
+    height: 100%;
+}
+.boxCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh;
+}
+.profileCard {
+    border:1px solid gray;
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+ 
+}
+
+html,body { height: 100%; margin: 0px; padding: 0px; }
+
+

@@ -1,0 +1,29 @@
+.forms {
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: bisque;
+    height: 100%;
+}
+html,body { height: 100%; margin: 0px; padding: 0px; }
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+ 
+}
+
+.buttons {
+    display: flex;
+    margin-top: 2rem;
+    
+}
+
+
+.logout {
+    margin-right: 2rem;
+}
