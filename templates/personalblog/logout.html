@@ -1,0 +1,29 @@
+{% extends 'personalblog/base.html' %}
+
+
+{% block title%}
+Logout
+{%endblock%}
+{%block styling%}
+{%load static%}
+<link rel="stylesheet" href="{% static 'personalblog/logout.css' %}">
+{%endblock%}
+
+{% block content%}
+
+<div class="forms">
+    <h1>Do you want to logout? </h1>
+    <form action="#" method="post">
+        {%csrf_token%}
+        <div class="buttons">
+            <button type="submit" class="btn btn-warning logout">Logout</button>
+
+            <a href="javascript:history.back()">
+                <button type="button"  class="btn btn-success back">Back</button>
+            </a>
+    
+            
+        </div>
+    </form>
+</div>
+{%endblock%}

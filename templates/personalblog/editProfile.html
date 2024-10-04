@@ -1,0 +1,35 @@
+{% extends 'personalblog/base.html' %}
+{%block title%}
+Edit Profile
+{%endblock%}
+{%block styling%}
+{%load static%}
+<link rel="stylesheet" href="{% static 'personalblog/editProfile.css' %}">
+{%endblock%}
+{% block content%}
+<div class="forms">
+    <form action="#" method="post">
+        {%csrf_token%}
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Username</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" name="username">
+          </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" name="email">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Bio</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="bio"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Image</label>
+            <input type="file" class="form-control" id="exampleFormControlInput1" name="image">
+        </div>
+        
+        
+        <button type="submit" class="saves">Save Changes</button>
+    </form>
+</div>
+  
+{% endblock %}

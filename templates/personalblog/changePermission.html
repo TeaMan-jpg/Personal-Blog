@@ -1,0 +1,45 @@
+{% extends 'personalblog/base.html' %}
+{%block title%}
+Ban User
+{%endblock%}
+{%block styling%}
+{%load static%}
+<link rel="stylesheet" href="{% static 'personalblog/changePermission.css' %}">
+{%endblock%}
+{% block content%}
+<div class="forms">
+    
+    <form action="#" method="post">
+        <h2>Do you want to ban him?</h2>
+        {%csrf_token%}
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Username: {{user.username}}</label>
+           
+        </div>
+        <div class="buttons">
+            <a href="javascript:history.back()">
+                <button class="back" type="button">Back</button>
+            </a>
+            <button type="submit">Ban</button>
+        </div>
+    </form>
+    <div class="posts">
+        <ul class="list-group list-group-flush">
+            {%for blog in blogs%}
+                {% if blog.user == user%}
+                <li class="list-group-item">
+                    <p>{{blog.header}}</p>
+                    <p>{{blog.text}}</p>
+                </li>
+                
+                {%endif%}
+            {%endfor%}
+        </ul>
+        
+
+       
+
+    </div>
+</div>
+  
+{% endblock %}

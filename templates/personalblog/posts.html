@@ -1,0 +1,65 @@
+{% extends 'personalblog/base.html' %}
+
+{%block styling%}
+{%load static%}
+<link rel="stylesheet" href="{% static 'personalblog/posts.css' %}">
+{%endblock%}
+{% block title%}
+Posts
+{%endblock%}
+
+
+{% block content%}
+
+<div class="text">
+    
+        <form action="#" method="post">
+            {%csrf_token%}
+  
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Heading</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1"name="heading">
+              </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Text</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="text"></textarea>
+            </div>
+        
+            <button type="submit">Submit</button>
+        </form>
+    
+    <div class="blogs">
+        {%for blog in blogs%}
+            {%if request.user.is_authenticated and request.user == blog.author%}
+            
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">{{blog.header}}</h5>
+                <p class="card-text">{{blog.text}}</p>
+                <a href="/blog/editPost/{{ blog.id }}/">
+                  <button>Edit Post</button>
+              </a>
+              
+              </div>
+            </div>
+            
+                
+
+           
+
+            {%else%}
+            
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">{{blog.header}}</h5>
+                <p class="card-text">{{blog.text}}</p>
+              
+              </div>
+            </div>
+            {%endif%}
+
+
+        {%endfor%}
+    </div>
+</div>
+{%endblock%}

@@ -1,0 +1,36 @@
+{% extends 'personalblog/base.html' %}
+
+{%block styling%}
+{%load static%}
+<link rel="stylesheet" href="{% static 'personalblog/signUp.css' %}">
+{%endblock%}
+
+{% block title%}
+Login
+{%endblock%}
+
+
+{% block content%}
+
+<div class="forms">
+    <form action="#" method="post" class="w-32">
+        {%csrf_token%}
+        
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Username</label>
+            <input type="text" class="form-control user" id="exampleFormControlInput1" name="username">
+        </div>
+        
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Password</label>
+            <input type="text" class="form-control pass" id="exampleFormControlInput1" name="password">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email</label>
+            <input type="text" class="form-control email" id="exampleFormControlInput1" name="email">
+        </div>
+        <p class="login">Already have an account? Login <a href="/blog/login/">here</a></p>
+        <button type="submit" class="signUp">Sign up</button>
+    </form>
+</div>
+{%endblock%}

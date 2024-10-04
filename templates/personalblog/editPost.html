@@ -1,0 +1,27 @@
+{% extends 'personalblog/base.html' %}
+{%block title%}
+Edit Profile
+{%endblock%}
+{%block styling%}
+{%load static%}
+<link rel="stylesheet" href="{% static 'personalblog/editPost.css' %}">
+{%endblock%}
+
+{% block content%}
+<div class="forms">
+    <form action="#" method="post">
+        {%csrf_token%}
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Heading</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1"name="heading" value="{{blog.header}}">
+          </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Text</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="text">{{blog.text}}</textarea>
+        </div>
+    
+        <button type="submit">Submit</button>
+    </form>
+</div>
+  
+{% endblock %}

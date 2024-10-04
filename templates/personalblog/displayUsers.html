@@ -1,0 +1,28 @@
+{% extends 'personalblog/base.html' %}
+{%block title%}
+Ban User
+{%endblock%}
+{%block styling%}
+{%load static%}
+<link rel="stylesheet" href="{% static 'personalblog/displayUser.css' %}">
+{%endblock%}
+{% block content%}
+<div class="forms">
+   
+    <div class="users">
+        <h2 class="title">All available users</h2>
+        <ul class="list-group list-group-flush userList">
+            {%for user in users%}
+                <li class="list-group-item userItem">
+                    <p>{{user.username}}</p>
+                    <a href="/blog/users/{{ user.id }}/"><button>Go to</button></a>
+                </li>
+                
+            {%endfor%}
+        </ul>
+        
+
+    </div>
+</div>
+  
+{% endblock %}
